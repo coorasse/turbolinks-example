@@ -6,10 +6,6 @@ p
 p
   strong Content:
   = @comment.content
-p
-  strong Post:
-  = @comment.post
 
-= link_to 'Edit', edit_comment_path(@comment)
-'|
-= link_to 'Back', comments_path
+  = link_to 'Edit', edit_blog_post_comment_path(@blog, @post, @comment), class: 'btn btn-primary'
+  = link_to 'Back', [@blog, @post], class: 'btn btn-secondary'

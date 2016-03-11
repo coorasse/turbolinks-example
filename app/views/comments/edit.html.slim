@@ -2,7 +2,6 @@ h1 Editing comment
 
 == render 'form'
 
-= link_to 'Show', @comment
-'|
-= link_to 'Back', comments_path
+= link_to 'Show', [@blog, @post, @comment], class: 'btn btn-secondary'
+= link_to 'Back', [@blog, @post], class: 'btn btn-secondary'
 

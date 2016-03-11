@@ -1,5 +1,9 @@
+- content_for :head do
+  meta name="position" content="blogs-new"
+  meta name="added" content="new-tag"
+
 h1 New blog
 
 == render 'form'
 
-= link_to 'Back', blogs_path
+= link_to 'Back', blogs_path, class: 'btn btn-secondary'

@@ -1,9 +1,19 @@
-p#notice = notice
+h1 = @blog.title
 
-p
-  strong Title:
-  = @blog.title
+= link_to 'Edit', edit_blog_path(@blog), class: 'btn btn-primary'
+= link_to 'Back', blogs_path, class: 'btn btn-secondary'
 
-= link_to 'Edit', edit_blog_path(@blog)
-'|
-= link_to 'Back', blogs_path
+h4 Posts
+
+- @blog.posts.each do |post|
+  .row
+    .col-xs-12
+      = post.content
+      ' by
+      = post.username
+    .col-sm-6
+      = link_to 'Show', [@blog, post], class: 'btn btn-secondary'
+      = link_to 'Edit', edit_blog_post_path(@blog, post), class: 'btn btn-secondary'
+      = link_to 'Destroy', [@blog, post], class: 'btn btn-secondary', data: { :confirm => 'Are you sure?' }, :method => :delete
+
+= link_to 'New Post', new_blog_post_path(@blog), class: 'btn btn-primary'

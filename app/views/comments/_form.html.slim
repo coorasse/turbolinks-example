@@ -1,4 +1,4 @@
-= form_for @comment do |f|
+= form_for [@blog, @post, @comment] do |f|
   - if @comment.errors.any?
     #error_explanation
       h2 = "#{pluralize(@comment.errors.count, "error")} prohibited this comment from being saved:"
@@ -8,11 +8,8 @@
 
   .field
     = f.label :username
-    = f.text_field :username
+    = f.text_field :username, class: 'form-control'
   .field
     = f.label :content
-    = f.text_area :content
-  .field
-    = f.label :post
-    = f.text_field :post
-  .actions = f.submit
+    = f.text_area :content, class: 'form-control'
+  .actions = f.submit class: 'btn btn-primary'

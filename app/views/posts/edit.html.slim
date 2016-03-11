@@ -2,7 +2,6 @@ h1 Editing post
 
 == render 'form'
 
-= link_to 'Show', @post
-'|
-= link_to 'Back', posts_path
+= link_to 'Show', [@blog, @post], class: 'btn btn-secondary'
+= link_to 'Back', @blog, class: 'btn btn-secondary'
 
