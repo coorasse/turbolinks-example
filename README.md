@@ -1,24 +1,7 @@
-## README
+## Turbolinks Examples
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Here you are a very small and simple Rails 5 app which uses Turbolinks 5.
 
-Things you may want to cover:
+Few examples are contained in here to show how it works during meetings and for the blog post you can find here:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://medium.com/@coorasse/turbolinks-how-to-organize-your-javascript-code-df83d59c0886
